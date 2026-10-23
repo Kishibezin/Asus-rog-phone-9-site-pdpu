@@ -1,0 +1,138 @@
+/* ===== CSS EXTERNO — ASUS ROG Phone 9 ===== */
+:root{
+  --grafite:#333333;
+  --vermelho:#f23322;
+  --claro:#f0f0f0;
+  --branco:#ffffff;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'Didact Gothic',Arial,sans-serif;
+  color:var(--grafite);
+  background-color:var(--claro);
+  text-align:center;
+  line-height:1.6;
+  letter-spacing:.04em;
+  font-size:1.15rem;
+}
+h1,h2,h3{font-family:'Gilda Display',Georgia,serif;font-weight:normal;margin:0 0 16px;}
+h2{font-size:2.4rem;}
+h3{font-size:1.6rem;}
+p{margin:0 0 18px;}
+
+/* Cabeçalho e menu */
+header{
+  background-color:var(--grafite);
+  color:var(--branco);
+  padding:40px 20px;
+  border-bottom:3px solid var(--branco);
+}
+header h1{font-size:3.2rem;margin:0;}
+nav{
+  background-color:var(--vermelho);
+  padding:28px 10px;
+  border-bottom:2px solid var(--grafite);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+}
+nav a{
+  color:var(--branco);
+  text-decoration:underline;
+  padding:8px 16px;
+  border:2px solid var(--branco);
+  border-radius:6px;
+  transition:background-color .25s, color .25s, transform .25s;
+}
+nav a:hover,nav a.ativo{
+  background-color:var(--grafite);
+  border-color:var(--grafite);
+  transform:translateY(-2px);
+}
+
+/* Botões com efeito hover */
+.btn{
+  display:inline-block;
+  font-family:'Orbitron',Arial,sans-serif;
+  font-size:.95rem;
+  text-decoration:none;
+  color:var(--branco);
+  background-color:var(--grafite);
+  border:2px solid var(--grafite);
+  border-radius:8px;
+  padding:12px 24px;
+  margin:8px;
+  cursor:pointer;
+  transition:background-color .3s, color .3s, transform .3s, box-shadow .3s;
+}
+.btn:hover{
+  background-color:var(--vermelho);
+  border-color:var(--vermelho);
+  transform:scale(1.07);
+  box-shadow:0 6px 16px rgba(0,0,0,.35);
+}
+.btn-claro{background-color:transparent;color:var(--grafite);}
+.btn-claro:hover{color:var(--branco);}
+
+/* LAYOUT 1: duas colunas (flex) */
+.dividido{display:flex;min-height:70vh;}
+.dividido > section{
+  flex:1;padding:40px 30px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+}
+.dividido > section:first-child{border-right:3px solid var(--grafite);}
+.divisor-vermelho > section:first-child{border-right:3px solid var(--vermelho);}
+
+/* LAYOUT 2: lista + imagens (grid) */
+.grade-specs{display:grid;grid-template-columns:1fr 1fr;}
+.grade-specs > div{padding:30px;border-bottom:3px solid var(--grafite);}
+.grade-specs > div:first-child{border-right:3px solid var(--grafite);grid-row:span 2;border-bottom:none;}
+
+/* LAYOUT 3: três colunas */
+.tres-colunas{display:flex;}
+.tres-colunas > section{flex:1;padding:50px 24px;}
+.tres-colunas > section + section{border-left:3px solid var(--vermelho);}
+
+/* LAYOUT 4: faixas empilhadas (galeria) */
+.faixa{padding:40px 20px;border-bottom:3px solid var(--vermelho);}
+
+/* LAYOUT 5: coluna única centralizada (sobre) */
+.coluna-unica{max-width:760px;margin:40px auto;padding:30px;border:3px solid var(--grafite);border-radius:12px;background-color:rgba(255,255,255,.88);}
+
+/* Imagens, vídeos, áudio */
+img{max-width:100%;height:auto;display:block;margin:0 auto;}
+.foto{border:3px solid var(--grafite);border-radius:14px;background:#000;}
+video{width:100%;max-width:640px;border:3px solid var(--vermelho);border-radius:10px;background:#000;}
+.player{
+  width:100%;max-width:340px;margin-top:40px;padding:16px;
+  background-color:var(--grafite);color:var(--branco);
+  border:2px solid var(--vermelho);border-radius:14px;
+}
+.player p{font-size:1rem;margin-bottom:10px;}
+.player audio{width:100%;}
+
+/* Listas e tabelas */
+ul.lista{list-style:disc;text-align:left;max-width:520px;margin:0 auto;padding-left:24px;}
+ul.lista li{margin-bottom:10px;}
+ol.lista{text-align:left;max-width:560px;margin:0 auto 20px;padding-left:28px;}
+table{border-collapse:collapse;margin:20px auto;width:100%;max-width:640px;}
+th,td{border:2px solid var(--grafite);padding:12px;text-align:left;}
+th{background-color:var(--grafite);color:var(--branco);font-family:'Orbitron',Arial,sans-serif;font-size:.9rem;}
+tr:nth-child(even) td{background-color:rgba(0,0,0,.06);}
+
+.legenda{font-size:.95rem;font-style:italic;margin-top:8px;}
+
+footer{
+  background-color:var(--grafite);color:var(--branco);
+  padding:26px 20px;border-top:3px solid var(--vermelho);font-size:.95rem;
+}
+
+/* Responsivo */
+@media (max-width:760px){
+  .dividido,.tres-colunas{flex-direction:column;}
+  .dividido > section:first-child{border-right:none;border-bottom:3px solid var(--grafite);}
+  .divisor-vermelho > section:first-child{border-bottom-color:var(--vermelho);}
+  .tres-colunas > section + section{border-left:none;border-top:3px solid var(--vermelho);}
+  .grade-specs{grid-template-columns:1fr;}
+  .grade-specs > div:first-child{border-right:none;border-bottom:3px solid var(--grafite);grid-row:auto;}
+  header h1{font-size:2.2rem;}
+}
