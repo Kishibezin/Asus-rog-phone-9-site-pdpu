@@ -15,11 +15,11 @@ body{background-image:linear-gradient(135deg,#f23322 0%,#333333 70%);}
 </style>
 </head>
 <body>
-<header><h1>ASUS ROG Phone 9</h1></header>
-<nav><a href="index.html">Início</a><a href="especificacoes.html">Especificações</a><a href="recursos.html">Recursos</a><a href="galeria.html">Galeria</a><a href="sobre.html" class="ativo">Sobre</a></nav>
+<header id="topo"><h1>ASUS ROG Phone 9</h1></header>
+<nav><a href="index.html">Início</a><a href="especificacoes.html">Especificações</a><a href="recursos.html">Recursos</a><div class="dropdown"><a href="galeria.html">Galeria</a><div class="dropdown-menu"><a href="galeria.html#video1">Vídeo 1</a><a href="galeria.html#video2">Vídeo 2</a><a href="galeria.html#video3">Vídeo 3</a></div></div><a href="sobre.html" class="ativo">Sobre</a></nav>
 <main>
 <div class="coluna-unica">
-  <img src="imagens/logo.svg" alt="Símbolo ROG" style="max-width:160px;margin-bottom:20px;">
+  <img src="imagens/20220801101712676.jpg" alt="Símbolo ROG" style="max-width:160px;margin-bottom:20px;">
   <h2>Sobre o projeto</h2>
   <p>Este site foi criado como trabalho da disciplina de <strong>HTML e CSS</strong> e apresenta o <b>ASUS ROG Phone 9</b>, smartphone da linha <em>Republic of Gamers</em>, voltada para jogos.</p>
   <p>O conteúdo está dividido em páginas:</p>
@@ -29,10 +29,33 @@ body{background-image:linear-gradient(135deg,#f23322 0%,#333333 70%);}
     <li><a href="recursos.html">Recursos</a> — o que faz o aparelho ser gamer</li>
     <li><a href="galeria.html">Galeria</a> — vídeos do produto</li>
   </ol>
+  <div class="destaques-rapidos">
+    <img class="foto flutuante" src="imagens/Ausus-branca.png" alt="ROG Phone 9 na versão branca">
+    <h3 class="texto-gradiente">Em resumo</h3>
+    <p>O ROG Phone 9 reúne o chip <strong>Snapdragon 8 Elite</strong>, tela AMOLED de até <em>185 Hz</em> e bateria de 5.800 mAh com carregamento de 65W, além da traseira <i>AniMe Vision</i>.</p>
+  </div>
+  <h3>Técnicas de CSS usadas</h3>
+  <div class="caixa-rolagem">
+    <ul class="lista">
+      <li>CSS inline, interno e externo</li>
+      <li>Seletores, classes e id</li>
+      <li>color, background e gradientes</li>
+      <li>border, margin e padding</li>
+      <li>width, height e max-width</li>
+      <li>display, flexbox e grid</li>
+      <li>position: menu suspenso e botão de topo</li>
+      <li>float e overflow</li>
+      <li>opacity e transições</li>
+      <li>text-shadow e box-shadow</li>
+      <li>Media queries (layout responsivo)</li>
+      <li>Especificidade e regra !important</li>
+    </ul>
+  </div>
   <p style="color:#f23322;"><i>Informações baseadas nas especificações divulgadas pela ASUS.</i></p>
   <a class="btn" href="index.html">Voltar à página principal</a>
   <a class="btn btn-claro" href="galeria.html">Ver a galeria</a>
 </div>
 </main>
+<a id="botao-topo" class="btn" href="#topo">↑ Topo</a>
 </body>
 </html>

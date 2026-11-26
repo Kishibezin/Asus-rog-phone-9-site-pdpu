@@ -16,8 +16,8 @@ body{background-image:linear-gradient(180deg,#f0f0f0 0%,#d9d9d9 100%);}
 </style>
 </head>
 <body>
-<header><h1>ASUS ROG Phone 9</h1></header>
-<nav><a href="index.html">Início</a><a href="especificacoes.html" class="ativo">Especificações</a><a href="recursos.html">Recursos</a><a href="galeria.html">Galeria</a><a href="sobre.html">Sobre</a></nav>
+<header id="topo"><h1>ASUS ROG Phone 9</h1></header>
+<nav><a href="index.html">Início</a><a href="especificacoes.html" class="ativo">Especificações</a><a href="recursos.html">Recursos</a><div class="dropdown"><a href="galeria.html">Galeria</a><div class="dropdown-menu"><a href="galeria.html#video1">Vídeo 1</a><a href="galeria.html#video2">Vídeo 2</a><a href="galeria.html#video3">Vídeo 3</a></div></div><a href="sobre.html">Sobre</a></nav>
 <main>
 <div class="grade-specs">
   <div>
@@ -40,11 +40,11 @@ body{background-image:linear-gradient(180deg,#f0f0f0 0%,#d9d9d9 100%);}
     </ul>
   </div>
   <div>
-    <img class="foto" src="imagens/branco.svg" alt="ROG Phone 9 na versão branca" style="max-width:360px;">
+    <img class="foto" src="imagens/Ausus-branca.png" alt="ROG Phone 9 na versão branca" style="max-width:360px;">
     <p class="legenda">Versão branca</p>
   </div>
   <div>
-    <img class="foto" src="imagens/preto.svg" alt="ROG Phone 9 na versão preta" style="max-width:300px;">
+    <img class="foto" src="imagens/Ausus-preta.png" alt="ROG Phone 9 na versão preta" style="max-width:300px;">
     <p class="legenda">Versão preta</p>
   </div>
 </div>
@@ -61,7 +61,10 @@ body{background-image:linear-gradient(180deg,#f0f0f0 0%,#d9d9d9 100%);}
   </table>
   <div class="player" style="margin:30px auto 0;">
     <p>ouça todo o conteúdo do site</p>
-    <audio controls src="audios/audio2.wav">Seu navegador não suporta áudio.</audio>
+    <audio controls preload="metadata">
+      <source src="audios/narracao-especificacoes.mp3" type="audio/mpeg">
+      <source src="audios/narracao-especificacoes.wav" type="audio/wav">
+      Seu navegador não suporta áudio.</audio>
   </div>
   <a class="btn" href="index.html" style="margin-top:30px;">Voltar à página principal</a>
 </section>
@@ -70,5 +73,6 @@ body{background-image:linear-gradient(180deg,#f0f0f0 0%,#d9d9d9 100%);}
 <p style="margin:0;">Trabalho acadêmico de HTML e CSS — <em>ASUS ROG Phone 9</em></p>
 <a class="btn" href="index.html">Voltar à página principal</a>
 </footer>
+<a id="botao-topo" class="btn" href="#topo">↑ Topo</a>
 </body>
 </html>

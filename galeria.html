@@ -16,22 +16,22 @@ body{background-color:#0b1a2e;background-image:linear-gradient(180deg,#0b1a2e 0%
 </style>
 </head>
 <body>
-<header><h1>ASUS ROG Phone 9</h1></header>
-<nav><a href="index.html">Início</a><a href="especificacoes.html">Especificações</a><a href="recursos.html">Recursos</a><a href="galeria.html" class="ativo">Galeria</a><a href="sobre.html">Sobre</a></nav>
+<header id="topo"><h1>ASUS ROG Phone 9</h1></header>
+<nav><a href="index.html">Início</a><a href="especificacoes.html">Especificações</a><a href="recursos.html">Recursos</a><div class="dropdown"><a href="galeria.html" class="ativo">Galeria</a><div class="dropdown-menu"><a href="galeria.html#video1">Vídeo 1</a><a href="galeria.html#video2">Vídeo 2</a><a href="galeria.html#video3">Vídeo 3</a></div></div><a href="sobre.html">Sobre</a></nav>
 <main>
-<section class="faixa">
+<section class="faixa" id="video1">
   <h2>Vídeo 1 — ROG Phone 9 Series</h2>
-  <video controls src="videos/video1.mp4">Seu navegador não suporta vídeo.</video>
-  <p class="legenda">AI ON, GAME ON</p>
+  <video controls src="videos/video1-express-your-vibe.mp4">Seu navegador não suporta vídeo.</video>
+  <p class="legenda">Introdução ao ROG Phone 9</p>
 </section>
-<section class="faixa">
-  <h2>Vídeo 2 — Refrigeração</h2>
-  <video controls src="videos/video2.mp4">Seu navegador não suporta vídeo.</video>
-  <p class="legenda">Sistema térmico e o chip <strong>Snapdragon</strong></p>
+<section class="faixa" id="video2">
+  <h2>Vídeo 2 — Sistema de IA</h2>
+  <video controls src="videos/video2-unlock-your-game-with-ai.mp4">Seu navegador não suporta vídeo.</video>
+  <p class="legenda">Conheça o <strong>AI Game on</strong></p>
 </section>
-<section class="faixa">
+<section class="faixa" id="video3">
   <h2>Vídeo 3 — Design</h2>
-  <video controls src="videos/video3.mp4">Seu navegador não suporta vídeo.</video>
+  <video controls src="videos/video3-animevision.mp4">Seu navegador não suporta vídeo.</video>
   <p class="legenda">Cores, <em>AniMe Vision</em> e acabamento</p>
   <a class="btn" href="index.html">Voltar à página principal</a>
 </section>
@@ -40,5 +40,6 @@ body{background-color:#0b1a2e;background-image:linear-gradient(180deg,#0b1a2e 0%
 <p style="margin:0;">Trabalho acadêmico de HTML e CSS — <em>ASUS ROG Phone 9</em></p>
 <a class="btn" href="index.html">Voltar à página principal</a>
 </footer>
+<a id="botao-topo" class="btn" href="#topo">↑ Topo</a>
 </body>
 </html>
