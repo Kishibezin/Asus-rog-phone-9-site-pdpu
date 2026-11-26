@@ -18,15 +18,18 @@ body{background-color:#f0f0f0;}
 </style>
 </head>
 <body>
-<header><h1>ASUS ROG Phone 9</h1></header>
-<nav><a href="index.html" class="ativo">Início</a><a href="especificacoes.html">Especificações</a><a href="recursos.html">Recursos</a><a href="galeria.html">Galeria</a><a href="sobre.html">Sobre</a></nav>
+<header id="topo"><h1>ASUS ROG Phone 9</h1></header>
+<nav><a href="index.html" class="ativo">Início</a><a href="especificacoes.html">Especificações</a><a href="recursos.html">Recursos</a><div class="dropdown"><a href="galeria.html">Galeria</a><div class="dropdown-menu"><a href="galeria.html#video1">Vídeo 1</a><a href="galeria.html#video2">Vídeo 2</a><a href="galeria.html#video3">Vídeo 3</a></div></div><a href="sobre.html">Sobre</a></nav>
 <main>
 <div class="dividido">
   <section>
     <p class="slogan"><strong>Potência</strong> para jogar. <em>Tecnologia</em> para vencer.</p>
     <div class="player">
       <p>ouça todo o conteúdo do site</p>
-      <audio controls src="audios/audio1.wav">Seu navegador não suporta áudio.</audio>
+      <audio controls preload="metadata">
+      <source src="audios/narracao-inicio.mp3" type="audio/mpeg">
+      <source src="audios/narracao-inicio.wav" type="audio/wav">
+      Seu navegador não suporta áudio.</audio>
     </div>
   </section>
   <section>
@@ -36,7 +39,7 @@ body{background-color:#f0f0f0;}
 
 <div class="dividido divisor-vermelho intro-produto" style="border-top:3px solid #333;">
   <section>
-    <img class="foto" src="imagens\tela.png" alt="Frente do ROG Phone 9" style="max-width:300px;">
+    <img class="foto" src="imagens/tela.png" alt="Frente do ROG Phone 9" style="max-width:300px;">
     <p class="legenda">Foto 1 — frente</p>
     <img class="foto" src="imagens/tras.png" alt="Traseira do ROG Phone 9" style="max-width:300px;margin-top:20px;">
     <p class="legenda">Foto 2 — traseira</p>
@@ -55,5 +58,6 @@ body{background-color:#f0f0f0;}
 </div>
 </main>
 <footer><p style="margin:0;">Trabalho acadêmico de HTML e CSS — <em>ASUS ROG Phone 9</em></p></footer>
+<a id="botao-topo" class="btn" href="#topo">↑ Topo</a>
 </body>
 </html>

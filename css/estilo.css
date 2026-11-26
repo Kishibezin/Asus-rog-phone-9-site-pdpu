@@ -136,3 +136,69 @@ footer{
   .grade-specs > div:first-child{border-right:none;border-bottom:3px solid var(--grafite);grid-row:auto;}
   header h1{font-size:2.2rem;}
 }
+
+
+/* =====================================================
+   CONTEÚDOS DE AULA ADICIONADOS (aulas 4, 5 e 6)
+   ===================================================== */
+
+/* Aula 6 — Text shadow e efeito de texto no título */
+header h1{text-shadow:0 0 14px rgba(242,51,34,.55);}
+html{scroll-behavior:smooth;}
+.texto-gradiente{
+  background-image:linear-gradient(90deg,var(--grafite),var(--vermelho));
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+}
+.tres-colunas h3{transition:letter-spacing .3s, text-shadow .3s;}
+.tres-colunas h3:hover{letter-spacing:.08em;text-shadow:0 0 10px rgba(242,51,34,.6);}
+
+/* Aula 3 — estados do link (:active) */
+.btn:active{transform:scale(.97);}
+nav a:active{transform:translateY(0);}
+
+/* Aula 4 e 5 — Position: relative + absolute (menu suspenso / dropdown) */
+nav{position:relative;z-index:10;}
+.dropdown{position:relative;}
+.dropdown > a{display:block;}
+.dropdown-menu{
+  display:none;
+  position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  min-width:190px;z-index:50;
+  padding:10px;
+  background-color:var(--grafite);
+  border:2px solid var(--branco);border-radius:8px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu{display:flex;flex-direction:column;gap:8px;}
+.dropdown-menu a{display:block;}
+.dropdown-menu a:hover{background-color:var(--vermelho);border-color:var(--vermelho);}
+
+/* Aula 4 — Position: fixed (botão de voltar ao topo)
+   Aula 5 — Especificidade: o seletor de id (1,0,0) vence a classe .btn (0,1,0) */
+#botao-topo{
+  position:fixed;right:16px;bottom:16px;z-index:100;
+  margin:0;padding:8px 14px;font-size:.8rem;
+  opacity:.8;
+}
+#botao-topo:hover{opacity:1;}
+
+/* Aula 4 — Float + Overflow, Aula 3 — Width e Height, Aula 5 — Opacity */
+.destaques-rapidos{text-align:left;overflow:auto;margin:30px 0;}
+.flutuante{float:left;width:110px;margin:0 18px 8px 0;opacity:.85;transition:opacity .3s;}
+.flutuante:hover{opacity:1;}
+.caixa-rolagem{
+  width:100%;max-width:520px;height:150px;
+  margin:0 auto 24px;padding:12px;
+  overflow-y:auto;
+  border:2px solid var(--grafite);border-radius:8px;
+  background-color:rgba(255,255,255,.7);
+  box-shadow:3px 3px 8px rgba(0,0,0,.25);
+}
+.caixa-rolagem ul.lista{margin:0;}
+
+/* Aula 5 — Regra !important (celular: menu abre dentro do fluxo da página) */
+@media (max-width:760px){
+  .dropdown-menu{position:static !important;transform:none !important;margin-top:8px;}
+}

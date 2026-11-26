@@ -1,0 +1,2 @@
+por algum motivo não consigo ouvir os áudios, mas pelo menos os vídeos funcionam (pelo menos no teste do vscode, pois meu navegador por algum motivo não suporta eles)
+estranho, no teste do vscode mostra que tá dando áudio mas o áudio não sai
